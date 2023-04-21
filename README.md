@@ -1,13 +1,17 @@
-## go-short
+# go-short
 
 URL shortener
 
-### howto
+## howto
+Setup
+```sh
+$ docker-compose up -d
+```
 Run server
-```go
+```sh
 $ go run main.go
 ```
 Run tests
-```go
-$ go test
+```sh
+$ go test -v ./...
 ```
