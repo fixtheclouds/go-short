@@ -21,6 +21,7 @@ jobs:
           go-version: 1.18.x
 
       - name: Run tests
+        uses: actions/setup-go@v2
         env:
           REDIS_HOST: redis://localhost:6379
 
