@@ -1,11 +1,11 @@
-package handler
+package controllers
 
 import (
 	"fmt"
 	"net/http"
 	"os"
 
-	"github.com/fixtheclouds/go-short/shortener"
+	"github.com/fixtheclouds/go-short/services"
 	"github.com/fixtheclouds/go-short/store"
 	"github.com/gin-gonic/gin"
 )
@@ -24,7 +24,7 @@ func CreateShortUrl(ctx *gin.Context) {
 		return
 	}
 
-	shortUrl := shortener.GenerateShortLink(request.OriginalUrl, request.UserId)
+	shortUrl := services.GenerateShortLink(request.OriginalUrl, request.UserId)
 	store.SaveUrlMapping(request.OriginalUrl, shortUrl, request.UserId)
 
 	if os.Getenv("PORT") != "" {

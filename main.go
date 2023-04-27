@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/fixtheclouds/go-short/handler"
+	"github.com/fixtheclouds/go-short/controllers"
 	"github.com/fixtheclouds/go-short/store"
 	"github.com/gin-gonic/gin"
 )
@@ -19,11 +19,11 @@ func main() {
 	})
 
 	request.POST("/", func(ctx *gin.Context) {
-		handler.CreateShortUrl(ctx)
+		controllers.CreateShortUrl(ctx)
 	})
 
 	request.GET("/:shortUrl", func(ctx *gin.Context) {
-		handler.HandleShortUrlRedirect(ctx)
+		controllers.HandleShortUrlRedirect(ctx)
 	})
 
 	store.InitializeStore()

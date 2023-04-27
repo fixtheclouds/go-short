@@ -1,6 +1,6 @@
 # go-short
 
-URL shortener
+URL services
 
 ## howto
 Setup
