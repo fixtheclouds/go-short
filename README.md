@@ -1,3 +1,5 @@
+[![go-short test](https://github.com/fixtheclouds/go-short/actions/workflows/test.yml/badge.svg)](https://github.com/fixtheclouds/go-short/actions/workflows/test.yml)
+
 # go-short
 
 URL services
